@@ -1,0 +1,29 @@
+﻿
+@model IPagedList<CarlistViewModel>
+
+
+<div id="carList">
+    
+    <div class="pagedList" data-nfs-target="#carList">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new {page} ),
+            PagedListRenderOptions.MinimalWithItemCountText)
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div>
+            <h1 align="center">
+                @item.Vendor @item.Name
+            </h1>
+            <div>
+                <p>Type:            @item.Type</p>
+                <p>Info:            @item.Info</p>
+                <p>Price:           @item.Price</p>
+                <p>Review count:    @item.RatingCount</p>
+                <p>Average Rating:  @item.AvgRating</p>
+                <img src="~/Content/Images/@item.ImagePath.FirstOrDefault()"/>
+            </div>
+            <hr />
+        </div>
+    }
+</div>

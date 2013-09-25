@@ -1,0 +1,17 @@
+﻿@model NFSCarbonAppMvc4.Models.Car
+
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reviews for @Model.Vendor @Model.Name </h2>
+
+@Html.Partial("_Revies", Model.CarReview)
+
+<p>
+    @Html.ActionLink("Create New", "Create", new{carId = Model.Id})
+</p>
+

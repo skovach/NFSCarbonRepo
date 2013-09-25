@@ -1,0 +1,30 @@
+﻿@model IPagedList<CarlistViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<form method="get" action="@Url.Action("Index")"
+      data-nfs-ajax="true" data-nfs-target="#carList">
+    
+    <input type="search" name="searchTerm" data-nfs-autocomplete="@Url.Action("Autocomplete")"/>
+    <input type="submit" value="Search by Name"/>
+
+</form>
+
+@*@using (Ajax.BeginForm(
+    new AjaxOptions
+        {
+            HttpMethod = "get",
+            InsertionMode = InsertionMode.Replace,
+            UpdateTargetId = "carList"
+        }))
+{
+    <input type="search" name="searchTerm" />
+    <input type="submit" value="Search by Name" />
+}*@
+
+@ViewBag.MailServer
+
+@Html.Partial("_Cars", Model)
+

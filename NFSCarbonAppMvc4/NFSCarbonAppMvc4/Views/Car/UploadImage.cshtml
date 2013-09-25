@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "AddImages";
+}
+
+<h2>AddImages</h2>
+
+@using (Html.BeginForm("UploadImage", "Car", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <label for="image">Upload car image:</label>
+    <input type="file" name="image" id="image" style="width: 100%;"/>
+    <input type="submit" value="upload"/>
+}
+<div>@Html.ActionLink("Finish uploading","Index")</div>

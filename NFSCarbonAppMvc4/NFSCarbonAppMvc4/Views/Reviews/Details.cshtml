@@ -1,0 +1,43 @@
+﻿@model NFSCarbonAppMvc4.Models.CarReview
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CarReview</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CarId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CarId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReveiwerName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReveiwerName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rating)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rating)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Body)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Body)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
