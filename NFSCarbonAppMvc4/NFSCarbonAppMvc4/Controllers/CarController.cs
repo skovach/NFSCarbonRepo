@@ -20,7 +20,10 @@ namespace NFSCarbonAppMvc4.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Cars.ToList());
+            var imageList = from i in db.Images
+                select i.ImagePath;
+                            
+            return View(imageList);
         }
 
         //

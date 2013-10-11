@@ -41,7 +41,7 @@ namespace NFSCarbonAppMvc4.Migrations
                 new Image { CarId = 3, ImagePath = "Dodge1.jpg" }
                 );
             context.Reviews.AddOrUpdate( r => r.Id,
-                new CarReview{Body = "Like it!", CarId = 2, Rating = 10, ReveiwerName = "Serhii"});
+                new CarReview{Body = "Like it!", CarId = 2, Rating = 10, ReveiwerName = "Sergii"});
 
             SeedMembership();
 

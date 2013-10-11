@@ -7,7 +7,7 @@ $(function() {
 
         var options = {
             url: $form.attr("action"),
-            type: $form.attr("mothod"),
+            type: $form.attr("method"),
             data: $form.serialize()
         };
 
@@ -15,7 +15,7 @@ $(function() {
             var $target = $($form.attr("data-nfs-target"));
             var $newHtml = $(data);
             $target.replaceWith($newHtml);
-            $newHtml.effect("highlight");
+            $newHtml.effect("highlight", {color: 'black'}, 500);
         });
         
         return false;
